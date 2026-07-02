@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amarães Assessoria | Consultoria em RH</title>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --verde:    #3A4A2E;
+    --verde-md: #4E6340;
+    --verde-lt: #6B7F57;
+    --ouro:     #B8954A;
+    --ouro-lt:  #D4AF6A;
+    --creme:    #F4F1EB;
+    --branco:   #FFFFFF;
+    --cinza:    #E8E4DC;
+    --texto:    #2A2A2A;
+    --texto-lt: #555;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Lato', sans-serif;
+    color: var(--texto);
+    background: var(--creme);
+    overflow-x: hidden;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(58,74,46,0.97);
+    backdrop-filter: blur(8px);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 5%;
+    height: 64px;
+    border-bottom: 1px solid rgba(184,149,74,0.3);
+  }
+
+  .nav-logo {
+    display: flex; align-items: center; gap: 10px;
+    text-decoration: none;
+  }
+
+  .nav-logo .mark {
+    width: 36px; height: 36px;
+  }
+
+  .nav-logo span {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--branco);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .nav-links {
+    display: flex; gap: 2rem; list-style: none;
+  }
+
+  .nav-links a {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 400;
+    color: rgba(255,255,255,0.78);
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--ouro-lt); }
+
+  .nav-cta {
+    background: var(--ouro);
+    color: var(--verde) !important;
+    font-weight: 700 !important;
+    padding: 7px 18px;
+    border-radius: 2px;
+    color: var(--verde) !important;
+  }
+
+  /* ─── HERO ─── */
+  #inicio {
+    min-height: 100vh;
+    background: var(--verde);
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center;
+    padding: 120px 5% 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  #inicio::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 50% 60%, rgba(184,149,74,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-logo-svg {
+    width: 90px; height: 90px;
+    margin-bottom: 28px;
+    opacity: 0.95;
+  }
+
+  .hero-divider {
+    width: 220px; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--ouro), transparent);
+    margin: 0 auto 36px;
+  }
+
+  .hero-title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    color: var(--branco);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-bottom: 14px;
+  }
+
+  .hero-sub {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: clamp(0.85rem, 1.6vw, 1.1rem);
+    color: var(--ouro-lt);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .hero-desc {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.65);
+    max-width: 480px;
+    line-height: 1.7;
+    margin: 18px auto 40px;
+  }
+
+  .btn {
+    display: inline-block;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 14px 36px;
+    border-radius: 2px;
+    transition: all 0.25s;
+    cursor: pointer;
+    border: none;
+  }
+
+  .btn-ouro {
+    background: var(--ouro);
+    color: var(--verde);
+  }
+
+  .btn-ouro:hover {
+    background: var(--ouro-lt);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--ouro-lt);
+    border: 1.5px solid var(--ouro);
+  }
+
+  .btn-outline:hover {
+    background: var(--ouro);
+    color: var(--verde);
+  }
+
+  /* ─── SECTIONS ─── */
+  section {
+    padding: 100px 5%;
+  }
+
+  .section-tag {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--ouro);
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    line-height: 1.15;
+    margin-bottom: 20px;
+  }
+
+  .section-title.light { color: var(--branco); }
+  .section-title.dark  { color: var(--verde); }
+
+  .title-bar {
+    width: 48px; height: 3px;
+    background: var(--ouro);
+    margin-bottom: 36px;
+  }
+
+  /* ─── SOBRE ─── */
+  #sobre {
+    background: var(--creme);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  #sobre-section { background: var(--creme); }
+
+  .sobre-text p {
+    color: var(--texto-lt);
+    line-height: 1.85;
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .sobre-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 36px;
+  }
+
+  .stat-box {
+    background: var(--verde);
+    padding: 24px;
+    border-radius: 2px;
+    border-left: 3px solid var(--ouro);
+  }
+
+  .stat-num {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--ouro-lt);
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.65);
+    margin-top: 4px;
+    letter-spacing: 0.05em;
+  }
+
+  /* ─── SERVIÇOS ─── */
+  #servicos-section {
+    background: var(--verde);
+  }
+
+  .servicos-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 16px;
+  }
+
+  .servico-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(184,149,74,0.25);
+    border-top: 3px solid var(--ouro);
+    padding: 40px 32px;
+    border-radius: 2px;
+    transition: all 0.25s;
+  }
+
+  .servico-card:hover {
+    background: rgba(255,255,255,0.09);
+    transform: translateY(-4px);
+    border-color: rgba(184,149,74,0.6);
+  }
+
+  .servico-icon {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .servico-title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--ouro-lt);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  .servico-desc {
+    color: rgba(255,255,255,0.65);
+    font-size: 0.92rem;
+    line-height: 1.75;
+    margin-bottom: 20px;
+  }
+
+  .servico-lista {
+    list-style: none;
+    margin-top: 10px;
+  }
+
+  .servico-lista li {
+    color: rgba(255,255,255,0.5);
+    font-size: 0.82rem;
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    display: flex; align-items: flex-start; gap: 8px;
+  }
+
+  .servico-lista li::before {
+    content: '—';
+    color: var(--ouro);
+    flex-shrink: 0;
+  }
+
+  /* ─── COMO FUNCIONA ─── */
+  #como-section {
+    background: var(--creme);
+  }
+
+  .como-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .etapas {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+    margin-top: 16px;
+  }
+
+  .etapas::before {
+    content: '';
+    position: absolute;
+    left: 23px; top: 24px; bottom: 24px;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--ouro), transparent);
+  }
+
+  .etapa {
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+    padding: 28px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+
+  .etapa:last-child { border-bottom: none; }
+
+  .etapa-num {
+    width: 48px; height: 48px;
+    flex-shrink: 0;
+    background: var(--verde);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    font-size: 1rem;
+    color: var(--ouro-lt);
+    position: relative; z-index: 1;
+  }
+
+  .etapa-body h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--verde);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .etapa-body p {
+    color: var(--texto-lt);
+    font-size: 0.93rem;
+    line-height: 1.7;
+  }
+
+  /* ─── FERRAMENTAS ─── */
+  #ferramentas-section {
+    background: var(--verde);
+  }
+
+  .ferramentas-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .ferramentas-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-top: 16px;
+  }
+
+  .ferramenta-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(184,149,74,0.15);
+    padding: 18px 22px;
+    border-radius: 2px;
+  }
+
+  .ferramenta-check {
+    width: 28px; height: 28px; flex-shrink: 0;
+    background: var(--ouro);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--verde);
+    font-size: 0.85rem;
+    font-weight: 900;
+  }
+
+  .ferramenta-item span {
+    color: rgba(255,255,255,0.75);
+    font-size: 0.92rem;
+  }
+
+  /* ─── DIFERENCIAIS ─── */
+  #diferenciais-section {
+    background: var(--creme);
+  }
+
+  .diferenciais-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .diferenciais-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 16px;
+  }
+
+  .diferencial-card {
+    padding: 36px 28px;
+    border-radius: 2px;
+    border: 1px solid rgba(0,0,0,0.07);
+    background: var(--branco);
+    border-bottom: 3px solid var(--ouro);
+  }
+
+  .diferencial-icon {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+  }
+
+  .diferencial-card h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--verde);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .diferencial-card p {
+    color: var(--texto-lt);
+    font-size: 0.88rem;
+    line-height: 1.7;
+  }
+
+  /* ─── INVESTIMENTO ─── */
+  #investimento-section {
+    background: var(--verde);
+  }
+
+  .invest-inner {
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .invest-intro {
+    color: rgba(255,255,255,0.65);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 40px;
+  }
+
+  .tabela {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 36px;
+  }
+
+  .tabela thead tr {
+    background: var(--ouro);
+  }
+
+  .tabela thead th {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--verde);
+    padding: 16px 24px;
+    text-align: left;
+  }
+
+  .tabela tbody tr {
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    transition: background 0.15s;
+  }
+
+  .tabela tbody tr:hover {
+    background: rgba(255,255,255,0.04);
+  }
+
+  .tabela tbody td {
+    padding: 20px 24px;
+    font-size: 0.92rem;
+    color: rgba(255,255,255,0.75);
+  }
+
+  .tabela tbody td:last-child {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    color: var(--ouro-lt);
+    font-size: 1rem;
+  }
+
+  .condicoes {
+    background: rgba(184,149,74,0.08);
+    border: 1px solid rgba(184,149,74,0.25);
+    border-left: 4px solid var(--ouro);
+    padding: 28px 32px;
+    border-radius: 2px;
+  }
+
+  .condicoes h4 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ouro-lt);
+    margin-bottom: 16px;
+  }
+
+  .condicoes ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .condicoes li {
+    color: rgba(255,255,255,0.6);
+    font-size: 0.88rem;
+    line-height: 1.6;
+    display: flex; gap: 10px;
+  }
+
+  .condicoes li::before {
+    content: '·';
+    color: var(--ouro);
+    flex-shrink: 0;
+  }
+
+  /* ─── CONTATO ─── */
+  #contato-section {
+    background: var(--creme);
+  }
+
+  .contato-inner {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .contato-inner .section-tag,
+  .contato-inner .title-bar {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contato-desc {
+    color: var(--texto-lt);
+    font-size: 1rem;
+    line-height: 1.75;
+    margin-bottom: 48px;
+  }
+
+  .contato-grid {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+  }
+
+  .contato-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .contato-icone {
+    width: 48px; height: 48px;
+    background: var(--verde);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem;
+  }
+
+  .contato-item p {
+    font-size: 0.88rem;
+    color: var(--texto-lt);
+    text-align: center;
+  }
+
+  .contato-item a {
+    color: var(--verde);
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--verde);
+    padding: 40px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .footer-logo {
+    display: flex; align-items: center; gap: 10px;
+  }
+
+  .footer-logo span {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+  }
+
+  footer p {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.35);
+    text-align: right;
+  }
+
+  /* ─── HELPERS ─── */
+  .wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* ─── MOBILE ─── */
+  @media (max-width: 900px) {
+    .servicos-grid { grid-template-columns: 1fr; }
+    .diferenciais-grid { grid-template-columns: repeat(2,1fr); }
+    .ferramentas-grid { grid-template-columns: 1fr; }
+    #sobre { grid-template-columns: 1fr; gap: 40px; }
+    .nav-links { display: none; }
+    footer { flex-direction: column; text-align: center; }
+    footer p { text-align: center; }
+  }
+
+  @media (max-width: 600px) {
+    section { padding: 72px 6%; }
+    .diferenciais-grid { grid-template-columns: 1fr; }
+    .tabela thead th, .tabela tbody td { padding: 14px 12px; font-size: 0.82rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#inicio" class="nav-logo">
+    <svg class="mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="20,4 36,34 4,34" fill="none" stroke="#B8954A" stroke-width="2.2"/>
+      <polygon points="20,12 30,34 10,34" fill="rgba(184,149,74,0.18)" stroke="#B8954A" stroke-width="1.2"/>
+    </svg>
+    <span>Amarães</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#sobre-section">Sobre</a></li>
+    <li><a href="#servicos-section">Serviços</a></li>
+    <li><a href="#como-section">Como Funciona</a></li>
+    <li><a href="#investimento-section">Investimento</a></li>
+    <li><a href="#contato-section" class="nav-cta">Contato</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="inicio">
+  <svg class="hero-logo-svg" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="45,6 82,78 8,78" fill="none" stroke="#B8954A" stroke-width="2.5"/>
+    <polygon points="45,22 68,78 22,78" fill="rgba(184,149,74,0.15)" stroke="#B8954A" stroke-width="1.5"/>
+    <text x="45" y="62" text-anchor="middle" fill="rgba(184,149,74,0.5)" font-family="Raleway" font-weight="700" font-size="11" letter-spacing="3">AA</text>
+  </svg>
+
+  <div class="hero-divider"></div>
+
+  <p class="hero-sub">Assessoria</p>
+  <h1 class="hero-title">Amarães</h1>
+  <p class="hero-sub" style="color:rgba(255,255,255,0.5); font-size:0.78rem; margin-top:6px;">CONSULTORIA ESTRATÉGICA EM RECURSOS HUMANOS</p>
+
+  <p class="hero-desc">
+    Estruturamos o RH da sua empresa do zero — com processos, documentos,
+    indicadores e conformidade legal para você crescer com segurança.
+  </p>
+
+  <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;">
+    <a href="#servicos-section" class="btn btn-ouro">Conhecer os serviços</a>
+    <a href="#contato-section" class="btn btn-outline">Falar com a equipe</a>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre-section" style="background:var(--creme); padding:100px 5%;">
+  <div style="max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center;">
+    <div class="sobre-text">
+      <p class="section-tag">Sobre a Amarães</p>
+      <h2 class="section-title dark">Transformamos RH em vantagem estratégica</h2>
+      <div class="title-bar"></div>
+      <p>A Amarães Assessoria é uma consultoria especializada em estruturação estratégica de Recursos Humanos e adequação à Norma Regulamentadora nº 1 (NR-1).</p>
+      <p>Nosso objetivo é transformar o RH em uma área estratégica, criando processos padronizados, indicadores de desempenho, políticas internas e ferramentas que promovam eficiência operacional, segurança jurídica e desenvolvimento humano.</p>
+      <p>Atendemos empresas que desejam crescer de forma organizada, fortalecendo sua cultura e alinhando a gestão de pessoas aos objetivos do negócio.</p>
+    </div>
+    <div>
+      <div class="sobre-stats">
+        <div class="stat-box">
+          <div class="stat-num">12</div>
+          <div class="stat-label">Módulos de entrega no programa de RH</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">6</div>
+          <div class="stat-label">Meses de acompanhamento dedicado</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">10+</div>
+          <div class="stat-label">Ferramentas editáveis entregues</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Soluções personalizadas para cada empresa</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section id="servicos-section">
+  <div class="servicos-inner">
+    <p class="section-tag">O que oferecemos</p>
+    <h2 class="section-title light">Conheça os Serviços</h2>
+    <div class="title-bar"></div>
+    <div class="servicos-grid">
+
+      <div class="servico-card">
+        <div class="servico-icon">🏗️</div>
+        <p class="servico-title">Estruturação de RH</p>
+        <p class="servico-desc">Programa completo de 6 meses para implantar o setor de RH da sua empresa do diagnóstico à melhoria contínua.</p>
+        <ul class="servico-lista">
+          <li>Diagnóstico organizacional</li>
+          <li>Cargos, funções e salários</li>
+          <li>Recrutamento e seleção</li>
+          <li>Onboarding estruturado</li>
+          <li>Avaliação de desempenho</li>
+          <li>Políticas internas e indicadores</li>
+        </ul>
+      </div>
+
+      <div class="servico-card">
+        <div class="servico-icon">📋</div>
+        <p class="servico-title">Adequação à NR-1</p>
+        <p class="servico-desc">Implementamos as ações organizacionais exigidas pelo PGR para conformidade legal e segurança da sua empresa.</p>
+        <ul class="servico-lista">
+          <li>Políticas e código de conduta</li>
+          <li>Canal de denúncias estruturado</li>
+          <li>Comunicação interna e cartazes</li>
+          <li>Procedimentos de investigação</li>
+          <li>Fluxo disciplinar e de evidências</li>
+        </ul>
+      </div>
+
+      <div class="servico-card">
+        <div class="servico-icon">🎤</div>
+        <p class="servico-title">Treinamentos e Palestras</p>
+        <p class="servico-desc">Capacitações práticas e objetivas para lideranças e equipes, presencial ou remoto, com 2 horas de duração.</p>
+        <ul class="servico-lista">
+          <li>Liderança e gestão de pessoas</li>
+          <li>Comunicação assertiva</li>
+          <li>Prevenção e combate ao assédio</li>
+          <li>Gestão de conflitos</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section id="como-section">
+  <div class="como-inner">
+    <p class="section-tag">Metodologia</p>
+    <h2 class="section-title dark">Como Funciona</h2>
+    <div class="title-bar"></div>
+
+    <div class="etapas">
+      <div class="etapa">
+        <div class="etapa-num">1</div>
+        <div class="etapa-body">
+          <h3>Diagnóstico</h3>
+          <p>Levantamento dos processos existentes, identificação das necessidades e definição do plano de implantação.</p>
+        </div>
+      </div>
+      <div class="etapa">
+        <div class="etapa-num">2</div>
+        <div class="etapa-body">
+          <h3>Planejamento</h3>
+          <p>Construção do cronograma de execução e definição das prioridades conforme a realidade da empresa.</p>
+        </div>
+      </div>
+      <div class="etapa">
+        <div class="etapa-num">3</div>
+        <div class="etapa-body">
+          <h3>Estruturação</h3>
+          <p>Desenvolvimento de documentos, políticas, procedimentos e controles personalizados.</p>
+        </div>
+      </div>
+      <div class="etapa">
+        <div class="etapa-num">4</div>
+        <div class="etapa-body">
+          <h3>Implantação</h3>
+          <p>Implementação dos processos na empresa e treinamento das pessoas responsáveis por mantê-los.</p>
+        </div>
+      </div>
+      <div class="etapa">
+        <div class="etapa-num">5</div>
+        <div class="etapa-body">
+          <h3>Acompanhamento</h3>
+          <p>Monitoramento da implantação, ajustes finos e orientações contínuas durante o projeto.</p>
+        </div>
+      </div>
+      <div class="etapa">
+        <div class="etapa-num">6</div>
+        <div class="etapa-body">
+          <h3>Melhoria Contínua</h3>
+          <p>Avaliação dos indicadores e implementação de melhorias para sustentar os resultados a longo prazo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FERRAMENTAS -->
+<section id="ferramentas-section">
+  <div class="ferramentas-inner">
+    <p class="section-tag">O que você recebe</p>
+    <h2 class="section-title light">Ferramentas Entregues</h2>
+    <div class="title-bar"></div>
+    <p style="color:rgba(255,255,255,0.55); font-size:0.95rem; margin-bottom:36px; max-width:600px;">
+      A empresa receberá modelos editáveis para gestão autônoma dos processos de RH:
+    </p>
+    <div class="ferramentas-grid">
+      <div class="ferramenta-item"><div class="ferramenta-check">✓</div><span>Controle de férias</span></div>
+      <div class="ferramenta-item"><div class="ferramenta-check">✓</div><span>Controle de experiência</span></div>
+      <div class="ferramenta-item"><div class="ferramenta-check">✓</div><span>Controle de treinamentos</span></div>
+      <div class="ferramenta-item"><div class="ferramenta-check">✓</div><span>Controle de benefícios</span></div>
+      <div class="ferramenta-item"><div class="ferramenta-check">✓</div><span>Controle de reajustes</span></div>
+      <div class="ferramenta-item"><div class="ferramenta-check">✓</div><span>Controle de ASOs</span></div>
+      <div class="ferramenta-item"><div class="ferramenta-check">✓</div><span>Controle documental</span></div>
+      <div class="ferramenta-item"><div class="ferramenta-check">✓</div><span>Dashboard de RH</span></div>
+      <div class="ferramenta-item"><div class="ferramenta-check">✓</div><span>Dashboard de indicadores</span></div>
+      <div class="ferramenta-item"><div class="ferramenta-check">✓</div><span>Dashboard de recrutamento</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFERENCIAIS -->
+<section id="diferenciais-section">
+  <div class="diferenciais-inner">
+    <p class="section-tag">Por que a Amarães</p>
+    <h2 class="section-title dark">Nossos Diferenciais</h2>
+    <div class="title-bar"></div>
+    <div class="diferenciais-grid">
+      <div class="diferencial-card">
+        <div class="diferencial-icon">🤝</div>
+        <h3>Atendimento Próximo</h3>
+        <p>Não somos apenas fornecedores — somos parceiros no desenvolvimento do seu RH, do início ao fim.</p>
+      </div>
+      <div class="diferencial-card">
+        <div class="diferencial-icon">🎯</div>
+        <h3>Soluções sob Medida</h3>
+        <p>Cada empresa tem uma realidade única. Por isso, todo nosso trabalho é adaptado às suas necessidades específicas.</p>
+      </div>
+      <div class="diferencial-card">
+        <div class="diferencial-icon">⏱️</div>
+        <h3>Agilidade e Prazo</h3>
+        <p>Cronogramas definidos e respeitados. Você sabe exatamente o que esperar e quando receber.</p>
+      </div>
+      <div class="diferencial-card">
+        <div class="diferencial-icon">💬</div>
+        <h3>Comunicação Clara</h3>
+        <p>Você acompanha cada etapa com transparência, sem jargões desnecessários ou surpresas no meio do caminho.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INVESTIMENTO -->
+<section id="investimento-section">
+  <div class="invest-inner">
+    <p class="section-tag">Valores</p>
+    <h2 class="section-title light">Investimento</h2>
+    <div class="title-bar"></div>
+    <p class="invest-intro">
+      O Programa de Estruturação de RH e a Adequação à NR-1 podem ser contratados juntos ou separadamente, conforme as necessidades da sua empresa.
+    </p>
+
+    <table class="tabela">
+      <thead>
+        <tr>
+          <th>Serviço</th>
+          <th>Modalidade</th>
+          <th>Valor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Estruturação de RH — 6 meses</td>
+          <td>6 parcelas mensais</td>
+          <td>R$ 2.500/mês</td>
+        </tr>
+        <tr>
+          <td>Adequação Básica à NR-1</td>
+          <td>Projeto único — 2 parcelas</td>
+          <td>R$ 760</td>
+        </tr>
+        <tr>
+          <td>Treinamento / Palestra</td>
+          <td>2 horas</td>
+          <td>R$ 350/palestra</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="condicoes">
+      <h4>Condições Gerais</h4>
+      <ul>
+        <li>Proposta válida por 15 dias a partir da data de envio</li>
+        <li>Serviços prestados de forma remota com visitas presenciais conforme cronograma acordado</li>
+        <li>Ajustes e revisões ilimitados dentro do escopo contratado</li>
+        <li>Documentos entregues em formato editável</li>
+        <li>A Adequação à NR-1 não contempla elaboração de PGR, PCMSO, LTCAT ou laudos técnicos</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato-section">
+  <div class="contato-inner">
+    <p class="section-tag">Fale conosco</p>
+    <h2 class="section-title dark">Vamos Conversar?</h2>
+    <div class="title-bar"></div>
+    <p class="contato-desc">
+      Ficou com dúvidas ou quer saber como podemos estruturar o RH da sua empresa?
+      Entre em contato — estamos prontos para ajudar.
+    </p>
+
+    <div class="contato-grid">
+      <div class="contato-item">
+        <div class="contato-icone">📱</div>
+        <p><a href="https://wa.me/5512988204036">(12) 9 8820-4036</a></p>
+        <p style="font-size:0.78rem; color:#aaa;">WhatsApp</p>
+      </div>
+      <div class="contato-item">
+        <div class="contato-icone">✉️</div>
+        <p><a href="mailto:jessicaamaraes@gmail.com">jessicaamaraes@gmail.com</a></p>
+        <p style="font-size:0.78rem; color:#aaa;">E-mail</p>
+      </div>
+      <div class="contato-item">
+        <div class="contato-icone">🌐</div>
+        <p><a href="https://amaraesassessoria.my.canva.site/" target="_blank">amaraesassessoria</a></p>
+        <p style="font-size:0.78rem; color:#aaa;">Site</p>
+      </div>
+    </div>
+
+    <a href="https://wa.me/5512988204036" class="btn btn-ouro">💬 Falar pelo WhatsApp</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
+      <polygon points="20,4 36,34 4,34" fill="none" stroke="#B8954A" stroke-width="2"/>
+      <polygon points="20,12 30,34 10,34" fill="rgba(184,149,74,0.15)" stroke="#B8954A" stroke-width="1.2"/>
+    </svg>
+    <span>Amarães Assessoria</span>
+  </div>
+  <p>© 2025 Amarães Assessoria · Todos os direitos reservados<br>
+  (12) 9 8820-4036 · jessicaamaraes@gmail.com</p>
+</footer>
+
+</body>
+</html>
