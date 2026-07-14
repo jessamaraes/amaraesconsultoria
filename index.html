@@ -126,73 +126,32 @@ section{padding:100px 5%}
 
 /* iPad mockup com overlay */
 .ipad-mockup-wrap{position:relative;max-width:420px;margin:0 auto}
-.ipad-mockup-wrap img{width:100%;display:block;border-radius:8px}
-.ipad-screen-overlay{
-  position:absolute;
-  top:38.5%;left:24.5%;
-  width:51%;height:51%;
-  background:#0F2236;
-  border-radius:6px;
-  overflow:hidden;
-  display:flex;flex-direction:column;
-}
-.ipad-dash-header{background:#1A3050;padding:6px 10px;display:flex;align-items:center;justify-content:space-between}
-.ipad-dash-header span{font-size:6px;font-weight:700;color:var(--teal);letter-spacing:.08em;text-transform:uppercase}
-.ipad-dash-header .dot{width:5px;height:5px;border-radius:50%;background:var(--teal)}
-.ipad-dash-body{padding:8px;flex:1;display:flex;flex-direction:column;gap:5px}
-.ipad-kpi-row{display:flex;gap:5px}
-.ipad-kpi{flex:1;background:#1A3050;border-radius:3px;padding:5px 6px;border-top:2px solid var(--teal)}
-.ipad-kpi .kpi-val{font-size:10px;font-weight:700;color:var(--teal);font-family:'Raleway',sans-serif}
-.ipad-kpi .kpi-label{font-size:5px;color:rgba(255,255,255,.4);margin-top:1px;text-transform:uppercase;letter-spacing:.05em}
-.ipad-bar-section{background:#1A3050;border-radius:3px;padding:6px;flex:1}
-.ipad-bar-title{font-size:5px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px}
-.ipad-bars{display:flex;align-items:flex-end;gap:4px;height:30px}
-.ipad-bar{flex:1;border-radius:2px 2px 0 0;background:var(--teal);opacity:.7}
-.ipad-bar:nth-child(2){opacity:.5}
-.ipad-bar:nth-child(3){opacity:.85}
-.ipad-bar:nth-child(4){opacity:.6}
-.ipad-bar:nth-child(5){opacity:.9}
-.ipad-bar:nth-child(6){opacity:.45}
-.ipad-chip-row{display:flex;gap:4px}
-.ipad-chip{flex:1;background:#1A3050;border-radius:3px;padding:4px 5px;display:flex;align-items:center;gap:3px}
-.ipad-chip-dot{width:4px;height:4px;border-radius:50%;background:var(--teal)}
-.ipad-chip span{font-size:5px;color:rgba(255,255,255,.5);text-transform:uppercase}
-
-/* FOTOS EXTRA */
-#fotos-section{background:var(--branco);padding:80px 5%}
-.fotos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:1160px;margin:0 auto}
-.fotos-grid img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;border-radius:6px;display:block;transition:transform .3s}
-.fotos-grid img:hover{transform:scale(1.02)}
-.fotos-grid img:first-child{aspect-ratio:auto;object-fit:cover}
-
-/* FERRAMENTAS */
-#ferramentas-section{background:var(--navy)}
-.ferr-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:11px}
-.ferr-item{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,.04);border:1px solid rgba(59,191,173,.1);padding:15px 18px;border-radius:3px;transition:background .2s}
-.ferr-item:hover{background:rgba(255,255,255,.08)}
-.ferr-check{width:26px;height:26px;flex-shrink:0;background:var(--teal);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--navy);font-size:.75rem;font-weight:900}
-.ferr-item span{color:rgba(255,255,255,.65);font-size:.86rem}
+.ipad-mockup-wrap img{width:100%;display:block;border-radius:8px;box-shadow:0 24px 60px rgba(0,0,0,.3)}
 
 /* DIFERENCIAIS */
 #diferenciais-section{background:var(--creme)}
-.dif-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.dif-card{padding:32px 24px;border-radius:4px;border:1px solid var(--cinza);background:var(--branco);border-bottom:3px solid var(--teal);transition:all .25s}
-.dif-card:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(0,0,0,.08)}
-.dif-icon{font-size:1.6rem;margin-bottom:14px}
-.dif-card h3{font-family:'Raleway',sans-serif;font-weight:700;font-size:.85rem;color:var(--navy);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px}
-.dif-card p{color:var(--texto-lt);font-size:.83rem;line-height:1.72}
+.dif-wrap{text-align:center}
+.dif-photo{width:84px;height:84px;border-radius:50%;object-fit:cover;object-position:top center;margin:0 auto 20px;display:block;border:3px solid var(--teal-lt)}
+.dif-quote{font-family:'Raleway',sans-serif;font-weight:300;font-style:italic;font-size:clamp(1.25rem,2.6vw,1.7rem);color:var(--navy);max-width:760px;margin:22px auto 18px;line-height:1.55}
+.dif-sign{font-family:'Raleway',sans-serif;font-weight:700;font-size:.78rem;letter-spacing:.08em;color:var(--teal-dk);margin-bottom:64px}
+.dif-list{display:grid;grid-template-columns:repeat(2,1fr);gap:36px 56px;text-align:left;max-width:900px;margin:0 auto}
+.dif-row{position:relative;padding-left:26px}
+.dif-tri{position:absolute;left:0;top:6px;width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-bottom:9px solid var(--teal)}
+.dif-row h3{font-family:'Raleway',sans-serif;font-weight:700;font-size:.92rem;color:var(--navy);margin-bottom:6px}
+.dif-row p{color:var(--texto-lt);font-size:.85rem;line-height:1.7}
 
 /* CONTATO */
 #contato-section{background:var(--branco)}
-.contato-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
-.contato-foto img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top center;border-radius:4px;display:block}
-.contato-info p.desc{color:var(--texto-lt);font-size:.96rem;line-height:1.8;margin-bottom:34px}
-.contato-cards{display:flex;flex-direction:column;gap:12px;margin-bottom:34px}
-.contato-card{display:flex;align-items:center;gap:18px;background:var(--creme);border:1px solid var(--cinza);border-left:4px solid var(--teal);border-radius:3px;padding:15px 20px;text-decoration:none;color:inherit;transition:all .2s}
-.contato-card:hover{box-shadow:0 4px 18px rgba(0,0,0,.08);transform:translateX(3px)}
-.contato-ico{width:40px;height:40px;flex-shrink:0;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem}
-.contato-label{font-size:.7rem;color:var(--texto-lt);margin-bottom:2px}
-.contato-value{font-weight:600;color:var(--navy);font-size:.9rem}
+.banner-final{position:relative;background:linear-gradient(120deg,var(--navy) 0%,var(--navy-md) 100%);padding:80px 64px;display:flex;align-items:center;justify-content:center;gap:64px;overflow:hidden}
+.banner-photo{flex:none;width:200px;height:240px;border-radius:8px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.35);border:3px solid rgba(255,255,255,.15)}
+.banner-photo img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+.banner-content{text-align:center;max-width:560px}
+.banner-tagline{font-family:'Raleway',sans-serif;font-weight:300;font-size:1.3rem;color:#fff;line-height:1.5;margin-bottom:28px}
+.banner-logo{height:52px;margin-bottom:30px}
+.banner-contacts{display:flex;flex-direction:column;gap:14px;margin-bottom:34px;align-items:center}
+.banner-item{display:flex;align-items:center;gap:12px;color:rgba(255,255,255,.85);text-decoration:none;font-size:.9rem}
+.banner-item small{color:rgba(255,255,255,.5);font-size:.76rem}
+.banner-ico{font-size:1rem}
 
 /* FOOTER */
 footer{background:var(--navy);border-top:1px solid rgba(59,191,173,.15);padding:36px 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
@@ -204,19 +163,18 @@ footer p{font-size:.72rem;color:rgba(255,255,255,.28);text-align:right;line-heig
 /* MOBILE */
 @media(max-width:900px){
   .servicos-grid,.servicos-grid.tres{grid-template-columns:1fr}
-  .dif-grid{grid-template-columns:repeat(2,1fr)}
-  .ferr-grid{grid-template-columns:1fr}
-  .sobre-grid,.contato-grid,.ipad-grid{grid-template-columns:1fr;gap:40px}
+  .dif-list{grid-template-columns:repeat(2,1fr)}
+  .sobre-grid,.ipad-grid{grid-template-columns:1fr;gap:40px}
+  .banner-final{flex-direction:column;padding:56px 28px}
+  .banner-photo{width:160px;height:190px}
   .sobre-badge{left:10px}
   .nav-links{display:none}
-  .fotos-grid{grid-template-columns:repeat(2,1fr)}
   footer{flex-direction:column}
   footer p{text-align:center}
 }
 @media(max-width:580px){
   section{padding:70px 6%}
-  .dif-grid{grid-template-columns:1fr}
-  .fotos-grid{grid-template-columns:1fr}
+  .dif-list{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -258,12 +216,12 @@ footer p{font-size:.72rem;color:rgba(255,255,255,.28);text-align:right;line-heig
       <img src="foto-sobre.jpg" alt="Jéssica Amarães — Consultora de RH">
       <div class="sobre-badge">
         <strong>+12</strong>
-        <span>módulos entregues por projeto</span>
+        <span>anos de experiência em RH</span>
       </div>
     </div>
     <div class="sobre-text">
       <span class="section-tag">Sobre a Amarães</span>
-      <h2 class="section-title dark">Transformamos RH em vantagem competitiva</h2>
+      <h2 class="section-title dark">Transformamos RH em algo que agrega valor e segurança de verdade para a empresa</h2>
       <div class="title-bar"></div>
       <p>A Amarães Consultoria é especializada em estruturação estratégica de Recursos Humanos e adequação à Norma Regulamentadora nº 1 (NR-1), com uma abordagem completamente personalizada para cada empresa.</p>
       <p>Nosso objetivo é transformar o RH em uma área estratégica — criando processos padronizados, indicadores de desempenho, políticas internas e ferramentas que promovam eficiência operacional, segurança jurídica e desenvolvimento humano.</p>
@@ -405,113 +363,66 @@ footer p{font-size:.72rem;color:rgba(255,255,255,.28);text-align:right;line-heig
     </div>
     <div class="ipad-mockup-wrap">
       <img src="foto-ipad.jpg" alt="Jéssica com iPad">
-      <div class="ipad-screen-overlay">
-        <div class="ipad-dash-header">
-          <span>Dashboard RH</span>
-          <div class="dot"></div>
-        </div>
-        <div class="ipad-dash-body">
-          <div class="ipad-kpi-row">
-            <div class="ipad-kpi"><div class="kpi-val">94%</div><div class="kpi-label">Retenção</div></div>
-            <div class="ipad-kpi"><div class="kpi-val">12</div><div class="kpi-label">Admissões</div></div>
-            <div class="ipad-kpi"><div class="kpi-val">3,2%</div><div class="kpi-label">Turnover</div></div>
-          </div>
-          <div class="ipad-bar-section">
-            <div class="ipad-bar-title">Indicadores mensais</div>
-            <div class="ipad-bars">
-              <div class="ipad-bar" style="height:55%"></div>
-              <div class="ipad-bar" style="height:40%"></div>
-              <div class="ipad-bar" style="height:70%"></div>
-              <div class="ipad-bar" style="height:50%"></div>
-              <div class="ipad-bar" style="height:85%"></div>
-              <div class="ipad-bar" style="height:35%"></div>
-            </div>
-          </div>
-          <div class="ipad-chip-row">
-            <div class="ipad-chip"><div class="ipad-chip-dot"></div><span>Férias OK</span></div>
-            <div class="ipad-chip"><div class="ipad-chip-dot"></div><span>ASOs OK</span></div>
-            <div class="ipad-chip"><div class="ipad-chip-dot"></div><span>Docs OK</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOTOS EXTRA -->
-<section id="fotos-section">
-  <div class="wrap" style="text-align:center;margin-bottom:48px">
-    <span class="section-tag">Consultoria em ação</span>
-    <h2 class="section-title dark">Comprometimento em cada detalhe</h2>
-    <div class="title-bar" style="margin:0 auto 0"></div>
-  </div>
-  <div class="fotos-grid wrap">
-    <img src="foto-ipad2.jpg" alt="Consultora analisando dados">
-    <img src="foto-sobre.jpg" alt="Consultora em atendimento">
-    <img src="foto-tablet.jpg" alt="Consultora com tablet">
-  </div>
-</section>
-
-<!-- FERRAMENTAS -->
-<section id="ferramentas-section">
-  <div class="wrap">
-    <span class="section-tag">O que você recebe</span>
-    <h2 class="section-title light">Ferramentas Entregues</h2>
-    <div class="title-bar"></div>
-    <p style="color:rgba(255,255,255,.48);font-size:.92rem;margin-bottom:32px;max-width:560px">Modelos editáveis para a empresa gerir seus processos de RH com autonomia após o projeto:</p>
-    <div class="ferr-grid">
-      <div class="ferr-item"><div class="ferr-check">✓</div><span>Controle de férias</span></div>
-      <div class="ferr-item"><div class="ferr-check">✓</div><span>Controle de experiência</span></div>
-      <div class="ferr-item"><div class="ferr-check">✓</div><span>Controle de treinamentos</span></div>
-      <div class="ferr-item"><div class="ferr-check">✓</div><span>Controle de benefícios</span></div>
-      <div class="ferr-item"><div class="ferr-check">✓</div><span>Controle de reajustes</span></div>
-      <div class="ferr-item"><div class="ferr-check">✓</div><span>Controle de ASOs</span></div>
-      <div class="ferr-item"><div class="ferr-check">✓</div><span>Controle documental</span></div>
-      <div class="ferr-item"><div class="ferr-check">✓</div><span>Dashboard de RH</span></div>
-      <div class="ferr-item"><div class="ferr-check">✓</div><span>Dashboard de indicadores</span></div>
-      <div class="ferr-item"><div class="ferr-check">✓</div><span>Dashboard de recrutamento</span></div>
     </div>
   </div>
 </section>
 
 <!-- DIFERENCIAIS -->
 <section id="diferenciais-section">
-  <div class="wrap">
+  <div class="wrap dif-wrap">
     <span class="section-tag">Por que a Amarães</span>
-    <h2 class="section-title dark">Nossos Diferenciais</h2>
-    <div class="title-bar"></div>
-    <div class="dif-grid">
-      <div class="dif-card"><div class="dif-icon">🤝</div><h3>Atendimento Próximo</h3><p>Não somos apenas fornecedoras — somos parceiras no desenvolvimento do seu RH, do início ao fim.</p></div>
-      <div class="dif-card"><div class="dif-icon">🎯</div><h3>Soluções sob Medida</h3><p>Cada empresa tem uma realidade única. Todo o nosso trabalho é adaptado às suas necessidades específicas.</p></div>
-      <div class="dif-card"><div class="dif-icon">⚡</div><h3>Agilidade e Prazo</h3><p>Cronogramas definidos e respeitados. Você sabe exatamente o que esperar e quando receber.</p></div>
-      <div class="dif-card"><div class="dif-icon">💬</div><h3>Comunicação Clara</h3><p>Você acompanha cada etapa com transparência, sem jargões e sem surpresas no caminho.</p></div>
+    <img class="dif-photo" src="foto-quote.jpg" alt="Jéssica Amarães">
+    <p class="dif-quote">"Não entrego um relatório e vou embora. Entro na empresa, entendo a rotina de verdade e só depois desenho o que faz sentido — porque RH bom não é o que segue modelo, é o que serve quem trabalha ali."</p>
+    <div class="dif-sign">— Jéssica Amarães</div>
+
+    <div class="dif-list">
+      <div class="dif-row">
+        <div class="dif-tri"></div>
+        <h3>Atendimento próximo, não terceirizado</h3>
+        <p>Quem diagnostica, estrutura e acompanha é a mesma pessoa — do início ao fim do projeto.</p>
+      </div>
+      <div class="dif-row">
+        <div class="dif-tri"></div>
+        <h3>Nada de fórmula pronta</h3>
+        <p>Cada entrega nasce do que a sua empresa realmente precisa, não de um modelo genérico replicado.</p>
+      </div>
+      <div class="dif-row">
+        <div class="dif-tri"></div>
+        <h3>Prazo combinado é prazo cumprido</h3>
+        <p>Cronograma claro desde a primeira conversa — sem enrolação, sem surpresa no meio do caminho.</p>
+      </div>
+      <div class="dif-row">
+        <div class="dif-tri"></div>
+        <h3>Conversa de gente pra gente</h3>
+        <p>Sem jargão técnico pra impressionar. Você entende cada etapa do jeito que eu explico.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- CONTATO -->
-<section id="contato-section">
-  <div class="wrap contato-grid">
-    <div class="contato-foto">
-      <img src="foto-contato.jpg" alt="Jéssica Amarães">
-    </div>
-    <div class="contato-info">
-      <span class="section-tag">Vamos Conversar</span>
-      <h2 class="section-title dark">Pronta para transformar o RH da sua empresa?</h2>
-      <div class="title-bar"></div>
-      <p class="desc">Entre em contato e descubra como a Amarães Consultoria pode estruturar a gestão de pessoas no seu negócio — de forma personalizada e estratégica.</p>
-      <div class="contato-cards">
-        <a href="https://wa.me/5512988204036" class="contato-card" target="_blank">
-          <div class="contato-ico">📱</div>
-          <div><div class="contato-label">WhatsApp</div><div class="contato-value">(12) 9 8820-4036</div></div>
-        </a>
-        <a href="mailto:jessicaamaraes@gmail.com" class="contato-card">
-          <div class="contato-ico">✉️</div>
-          <div><div class="contato-label">E-mail</div><div class="contato-value">jessicaamaraes@gmail.com</div></div>
-        </a>
+<section id="contato-section" class="banner-final">
+  <div class="banner-photo">
+    <img src="foto-contato.jpg" alt="Jéssica Amarães">
+  </div>
+  <div class="banner-content">
+    <p class="banner-tagline">Mais estratégia, menos burocracia.<br>O crescimento do seu negócio começa aqui.</p>
+    <img class="banner-logo" src="logo-amaraes.png" alt="Amarães Consultoria">
+    <div class="banner-contacts">
+      <div class="banner-item">
+        <span class="banner-ico">📍</span>
+        <span>São José dos Campos/SP<br><small>Atendimento digital e presencial</small></span>
       </div>
-      <a href="https://wa.me/5512988204036" class="btn btn-teal" target="_blank">💬 Falar pelo WhatsApp</a>
+      <a href="https://wa.me/5512988204036" class="banner-item" target="_blank">
+        <span class="banner-ico">📱</span>
+        <span>(12) 9 8820-4036</span>
+      </a>
+      <a href="mailto:jessicaamaraes@gmail.com" class="banner-item">
+        <span class="banner-ico">✉️</span>
+        <span>jessicaamaraes@gmail.com</span>
+      </a>
     </div>
+    <a href="https://wa.me/5512988204036" class="btn btn-teal" target="_blank">💬 Falar pelo WhatsApp</a>
   </div>
 </section>
 
