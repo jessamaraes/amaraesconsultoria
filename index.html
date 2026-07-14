@@ -73,14 +73,13 @@ section{padding:100px 5%}
 
 /* SOBRE */
 #sobre-section{background:var(--branco)}
-.sobre-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
-.sobre-img-wrap{position:relative}
-.sobre-img-wrap img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;display:block;border-radius:4px}
-.sobre-badge{position:absolute;bottom:28px;left:-20px;background:var(--navy);padding:18px 24px;border-radius:3px;border-left:4px solid var(--teal);box-shadow:0 8px 32px rgba(0,0,0,.2)}
-.sobre-badge strong{font-family:'Raleway',sans-serif;font-weight:900;font-size:1.6rem;color:var(--teal);display:block}
-.sobre-badge span{font-size:.72rem;color:rgba(255,255,255,.55)}
-.sobre-text p{color:var(--texto-lt);line-height:1.85;font-size:.96rem;margin-bottom:16px}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.sobre-card{position:relative;display:grid;grid-template-columns:260px 1fr;gap:48px;align-items:center;background:var(--navy);border-radius:20px;padding:56px 64px 56px 140px;margin:24px 0 32px}
+.sobre-img-wrap{margin-left:-140px}
+.sobre-img-wrap img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;display:block;border-radius:12px;border:6px solid var(--creme);box-shadow:0 24px 50px rgba(0,0,0,.35)}
+.sobre-text h2{color:#fff}
+.sobre-text p{color:rgba(255,255,255,.68);line-height:1.85;font-size:.96rem;margin-bottom:16px}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:0}
+.chip-highlight{background:var(--navy);color:#fff;font-weight:700}
 .chip{background:var(--teal-lt);border:1px solid rgba(59,191,173,.3);color:var(--teal-dk);font-size:.76rem;font-weight:600;padding:6px 14px;border-radius:20px}
 
 /* SERVIÇOS */
@@ -141,7 +140,6 @@ section{padding:100px 5%}
 .dif-row p{color:var(--texto-lt);font-size:.85rem;line-height:1.7}
 
 /* CONTATO */
-#contato-section{background:var(--branco)}
 .banner-final{position:relative;background:linear-gradient(120deg,var(--navy) 0%,var(--navy-md) 100%);padding:80px 64px;display:flex;align-items:center;justify-content:center;gap:64px;overflow:hidden}
 .banner-photo{flex:none;width:200px;height:240px;border-radius:8px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.35);border:3px solid rgba(255,255,255,.15)}
 .banner-photo img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
@@ -164,10 +162,11 @@ footer p{font-size:.72rem;color:rgba(255,255,255,.28);text-align:right;line-heig
 @media(max-width:900px){
   .servicos-grid,.servicos-grid.tres{grid-template-columns:1fr}
   .dif-list{grid-template-columns:repeat(2,1fr)}
-  .sobre-grid,.ipad-grid{grid-template-columns:1fr;gap:40px}
+  .sobre-card{grid-template-columns:1fr;gap:32px;padding:40px 32px}
+  .ipad-grid{grid-template-columns:1fr;gap:40px}
+  .sobre-img-wrap{margin-left:0;max-width:220px;margin-inline:auto}
   .banner-final{flex-direction:column;padding:56px 28px}
   .banner-photo{width:160px;height:190px}
-  .sobre-badge{left:10px}
   .nav-links{display:none}
   footer{flex-direction:column}
   footer p{text-align:center}
@@ -211,28 +210,27 @@ footer p{font-size:.72rem;color:rgba(255,255,255,.28);text-align:right;line-heig
 
 <!-- SOBRE -->
 <section id="sobre-section">
-  <div class="wrap sobre-grid">
-    <div class="sobre-img-wrap">
-      <img src="foto-sobre.jpg" alt="Jéssica Amarães — Consultora de RH">
-      <div class="sobre-badge">
-        <strong>+12</strong>
-        <span>anos de experiência em RH</span>
+  <div class="wrap">
+    <span class="section-tag" style="display:block;text-align:center">Sobre a Amarães</span>
+    <div class="sobre-card">
+      <div class="sobre-img-wrap">
+        <img src="foto-sobre.jpg" alt="Jéssica Amarães — Consultora de RH">
+      </div>
+      <div class="sobre-text">
+        <h2 class="section-title light">Transformamos o RH em um setor estratégico que gera valor, organização e segurança para a sua empresa.</h2>
+        <div class="title-bar"></div>
+        <p>A Amarães Consultoria é especializada em estruturação estratégica de Recursos Humanos e adequação à Norma Regulamentadora nº 1 (NR-1), com uma abordagem completamente personalizada para cada empresa.</p>
+        <p>Nosso objetivo é transformar o RH em uma área estratégica — criando processos padronizados, indicadores de desempenho, políticas internas e ferramentas que promovam eficiência operacional, segurança jurídica e desenvolvimento humano.</p>
+        <p>Atendemos empresas que querem crescer de forma organizada, fortalecendo sua cultura e alinhando a gestão de pessoas aos resultados do negócio.</p>
       </div>
     </div>
-    <div class="sobre-text">
-      <span class="section-tag">Sobre a Amarães</span>
-      <h2 class="section-title dark">Transformamos RH em algo que agrega valor e segurança de verdade para a empresa</h2>
-      <div class="title-bar"></div>
-      <p>A Amarães Consultoria é especializada em estruturação estratégica de Recursos Humanos e adequação à Norma Regulamentadora nº 1 (NR-1), com uma abordagem completamente personalizada para cada empresa.</p>
-      <p>Nosso objetivo é transformar o RH em uma área estratégica — criando processos padronizados, indicadores de desempenho, políticas internas e ferramentas que promovam eficiência operacional, segurança jurídica e desenvolvimento humano.</p>
-      <p>Atendemos empresas que querem crescer de forma organizada, fortalecendo sua cultura e alinhando a gestão de pessoas aos resultados do negócio.</p>
-      <div class="chips">
-        <span class="chip">🏛️ Diagnóstico Organizacional</span>
-        <span class="chip">📑 Políticas Internas</span>
-        <span class="chip">⚖️ Conformidade NR-1</span>
-        <span class="chip">📊 Indicadores de RH</span>
-        <span class="chip">🎯 Atendimento Personalizado</span>
-      </div>
+    <div class="chips">
+      <span class="chip">🏛️ Diagnóstico Organizacional</span>
+      <span class="chip">📑 Políticas Internas</span>
+      <span class="chip">⚖️ Conformidade NR-1</span>
+      <span class="chip">📊 Indicadores de RH</span>
+      <span class="chip">🎯 Atendimento Personalizado</span>
+      <span class="chip chip-highlight">+ 12 anos de experiência em RH</span>
     </div>
   </div>
 </section>
